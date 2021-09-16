@@ -14,8 +14,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   
   def extension_allowlist
-  %w(jpg jpeg gif png)
+    %w(jpg jpeg gif png)
   end
+  
+  def size_range
+    1..10.megabytes
+  end
+    
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
