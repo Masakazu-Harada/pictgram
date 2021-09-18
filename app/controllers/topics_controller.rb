@@ -24,4 +24,3 @@ class TopicsController < ApplicationController
     params.require(:topic).permit(:image, :description)
   end
 end
-
