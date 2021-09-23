@@ -29,11 +29,7 @@ class SessionsController < ApplicationController
     @current_user = nil
   end
   
-  def imail_params
-    params.require(:session).permit(:email)
-  end
-  
-  def passward_params
-    params.require(:session).permit(:passward)
+  def session_params
+      params.require(:session).permit(:email, :password)
   end
 end
